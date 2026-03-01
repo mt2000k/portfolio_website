@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Send, Loader2, Mail, MapPin, Phone } from "lucide-react";
 
 export function Contact() {
-    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+    const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
     const [status, setStatus] = useState<"IDLE" | "LOADING" | "SUCCESS" | "ERROR">("IDLE");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -25,7 +25,7 @@ export function Contact() {
 
             if (res.ok) {
                 setStatus("SUCCESS");
-                setFormData({ name: "", email: "", message: "" });
+                setFormData({ name: "", email: "", subject: "", message: "" });
                 setTimeout(() => setStatus("IDLE"), 5000);
             } else {
                 setStatus("ERROR");
@@ -78,6 +78,10 @@ export function Contact() {
                                 <Mail className="w-6 h-6 text-blue-500" />
                                 <span>thakurmunish253@gmail.com</span>
                             </div>
+                            <div className="flex items-center space-x-4 text-foreground/80 hover:text-cyan-400 transition-colors">
+                                <Phone className="w-6 h-6 text-cyan-400" />
+                                <span>+91 98163 95125</span>
+                            </div>
                             <div className="flex items-center space-x-4 text-foreground/80">
                                 <MapPin className="w-6 h-6 text-cyan-400" />
                                 <span>Available Worldwide (Remote)</span>
@@ -104,7 +108,7 @@ export function Contact() {
                                     onChange={handleChange}
                                     required
                                     className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all font-medium"
-                                    placeholder="John Doe"
+                                    placeholder="Your Name"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -117,9 +121,23 @@ export function Contact() {
                                     onChange={handleChange}
                                     required
                                     className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all font-medium"
-                                    placeholder="john@example.com"
+                                    placeholder="your@gmail.com"
                                 />
                             </div>
+                        </div>
+
+                        <div className="space-y-2">
+                            <label htmlFor="subject" className="text-sm font-medium text-foreground/80">Subject</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                value={formData.subject}
+                                onChange={handleChange}
+                                required
+                                className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all font-medium"
+                                placeholder="Purpose"
+                            />
                         </div>
 
                         <div className="space-y-2">
