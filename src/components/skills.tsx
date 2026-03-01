@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import {
     SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiJavascript,
     SiHtml5, SiCss3, SiBootstrap, SiPhp, SiMysql, SiGit, SiCplusplus,
-    SiPython, SiKalilinux, SiTableau, SiC
+    SiPython, SiKalilinux, SiTableau, SiC, SiTypescript
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { Database, Shield, BrainCircuit, BarChart, Server, Code2, FileSpreadsheet } from "lucide-react";
@@ -21,6 +21,7 @@ const skillCategories = [
             { name: "Express.js", icon: <SiExpress className="w-8 h-8" /> },
             { name: "MongoDB", icon: <SiMongodb className="w-8 h-8 text-green-600" /> },
             { name: "JavaScript", icon: <SiJavascript className="w-8 h-8 text-yellow-400" /> },
+            { name: "TypeScript", icon: <SiTypescript className="w-8 h-8 text-blue-600" /> },
             { name: "HTML5", icon: <SiHtml5 className="w-8 h-8 text-orange-500" /> },
             { name: "CSS3", icon: <SiCss3 className="w-8 h-8 text-blue-500" /> },
             { name: "Tailwind CSS", icon: <SiTailwindcss className="w-8 h-8 text-cyan-400" /> },
