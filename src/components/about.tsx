@@ -103,7 +103,7 @@ export function About() {
                                         A Full Stack Engineer blending MERN stack mastery with modern 3D web technologies to build scalable, striking applications.
                                     </p>
                                     <div className="mt-8 flex gap-3 flex-wrap justify-center lg:justify-start">
-                                        <span className="px-4 py-2 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-medium text-sm backdrop-blur-md border border-blue-500/20 border-white/20">C++ / Java / JS</span>
+                                        <span className="px-4 py-2 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-medium text-sm backdrop-blur-md border border-blue-500/20 border-white/20">JS / Java / Python</span>
                                         <span className="px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-medium text-sm backdrop-blur-md border border-cyan-500/20">Next.js</span>
                                         <span className="px-4 py-2 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 font-medium text-sm backdrop-blur-md border border-purple-500/20">Cybersecurity</span>
                                     </div>

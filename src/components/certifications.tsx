@@ -13,29 +13,36 @@ interface Certification {
 
 const certifications: Certification[] = [
     {
-        title: "AWS Certified Developer - Associate",
-        issuer: "Amazon Web Services",
-        date: "2024",
-        link: "#",
+        title: "Tata - GenAI Powered Data Analytics Job Simulation",
+        issuer: "Forage",
+        date: "Jan 2026",
+        link: "https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_Lm3M8q5vmoG4yEW2j_1767690031282_completion_certificate.pdf",
     },
     {
-        title: "Full Stack Web Development",
-        issuer: "Coursera / Meta",
-        date: "2023",
-        link: "#",
+        title: "Tata - Cybersecurity Analyst Job Simulation",
+        issuer: "Forage",
+        date: "July 2025",
+        link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_Lm3M8q5vmoG4yEW2j_1753333921541_completion_certificate.pdf",
     },
     {
-        title: "Cybersecurity Basics & IAM",
-        issuer: "IBM",
-        date: "2023",
-        link: "#",
+        title: "Deloitte Australia - Cyber Job Simulation",
+        issuer: "Forage",
+        date: "July 2025",
+        link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_Lm3M8q5vmoG4yEW2j_1751650429794_completion_certificate.pdf",
     },
     {
-        title: "Data Analytics and Modeling",
-        issuer: "Google",
-        date: "2022",
-        link: "#",
-    }
+        title: "Deloitte Australia - Data Analytics Job Simulation",
+        issuer: "Forage",
+        date: "July 2025",
+        link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_Lm3M8q5vmoG4yEW2j_1751652521621_completion_certificate.pdf",
+    },
+
+    {
+        title: "Tata - Data Visualisation: Empowering Business with Effective Insights Job Simulation",
+        issuer: "Forage",
+        date: "July 2025",
+        link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_Lm3M8q5vmoG4yEW2j_1753331386775_completion_certificate.pdf",
+    },
 ];
 
 export function Certifications() {
@@ -63,13 +70,16 @@ export function Certifications() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {certifications.map((cert, index) => (
-                        <motion.div
+                        <motion.a
+                            href={cert.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             key={cert.title}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="flex items-start space-x-4 p-6 rounded-2xl bg-foreground/5 border border-foreground/10 hover:border-emerald-500/30 transition-all hover:bg-foreground/10 group"
+                            className="flex items-start space-x-4 p-6 rounded-2xl bg-foreground/5 border border-foreground/10 hover:border-emerald-500/30 transition-all hover:bg-foreground/10 group cursor-pointer"
                         >
                             <div className="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl group-hover:scale-110 transition-transform">
                                 <Award size={28} />
@@ -84,17 +94,12 @@ export function Certifications() {
                                         <Calendar size={14} className="mr-1" />
                                         {cert.date}
                                     </span>
-                                    <a
-                                        href={cert.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center text-xs font-semibold text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"
-                                    >
+                                    <span className="flex items-center text-xs font-semibold text-emerald-500 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
                                         View Credential <ExternalLink size={14} className="ml-1" />
-                                    </a>
+                                    </span>
                                 </div>
                             </div>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
             </div>
