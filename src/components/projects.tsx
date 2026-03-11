@@ -49,7 +49,7 @@ const projects: ProjectDetails[] = [
         techStack: ["Three.js", "React Three Fiber", "Framer Motion"],
         gradient: "from-green-400 to-teal-500",
         imageUrl: "/portfolio_matrixx.png",
-        githubUrl: "#",
+        githubUrl: "https://github.com/mt2000k/portfolio_website",
         liveUrl: "https://munishthakur.vercel.app/",
     }
 ];
