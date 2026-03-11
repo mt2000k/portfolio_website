@@ -52,15 +52,16 @@ const experiences: ExperienceItem[] = [
 
 function ExperienceCard({ item, index }: { item: ExperienceItem; index: number }) {
     const cardRef = useRef<HTMLDivElement>(null);
+    const iconRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
-        target: cardRef,
-        offset: ["start 65%", "start 50%"],
+        target: iconRef,
+        offset: ["start 50%", "center 50%"],
     });
 
-    // Animate glow based on scroll progress (0 to 1)
+
     const glowOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
     const glowScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
-    const iconColor = useTransform(scrollYProgress, [0.5, 1], ["var(--foreground)", "var(--blue-600)"]); // Use CSS variables if needed, or simply let opacity handle glow
+    const iconColor = useTransform(scrollYProgress, [0.5, 1], ["var(--foreground)", "var(--blue-600)"]);
 
     return (
         <motion.div
@@ -71,24 +72,24 @@ function ExperienceCard({ item, index }: { item: ExperienceItem; index: number }
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group md:py-8"
         >
-            <div className="relative flex items-center justify-center w-10 h-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                {/* Glow Background Layer */}
+            <div ref={iconRef} className="relative flex items-center justify-center w-10 h-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+
                 <motion.div
                     className="absolute inset-0 rounded-full bg-blue-500/50 dark:bg-cyan-400/50 blur-md transition-colors duration-300"
                     style={{ opacity: glowOpacity, scale: glowScale }}
                 />
 
-                {/* Real Icon Container */}
+
                 <motion.div
                     className="relative flex items-center justify-center w-full h-full rounded-full border-2 border-background dark:border-background/50 bg-foreground/5 dark:bg-foreground/10 shadow-sm transition-colors duration-300 overflow-hidden"
                 >
-                    {/* Animate icon color directly using a mask or active state */}
+
                     <motion.div
                         className="absolute inset-0 bg-blue-600 dark:bg-cyan-400 transition-colors duration-300"
                         style={{ opacity: glowOpacity }}
                     />
                     <div className="relative z-10 text-foreground dark:text-foreground transition-colors duration-300">
-                        {/* the icon SVG needs to be colorized when active */}
+
                         <motion.div style={{ color: glowOpacity as any ? "white" : "inherit" }} className="w-full h-full flex items-center justify-center mix-blend-difference dark:mix-blend-normal">
                             {item.type === "work" ? <Briefcase size={18} /> : item.type === "project" ? <Code2 size={18} /> : <GraduationCap size={18} />}
                         </motion.div>
@@ -159,16 +160,16 @@ export function Experience() {
                     ref={containerRef}
                     className="max-w-4xl mx-auto relative space-y-12 md:space-y-0"
                 >
-                    {/* Static subtle background track */}
+
                     <div className="absolute top-0 bottom-0 left-[1.25rem] md:left-1/2 -translate-x-px w-0.5 bg-foreground/10 dark:bg-foreground/20 transition-colors duration-300" />
 
-                    {/* Animated scrolling line (Desktop) */}
+
                     <motion.div
                         className="absolute top-0 bottom-0 left-[1.25rem] md:left-1/2 -translate-x-px w-0.5 bg-blue-600 dark:bg-cyan-400 origin-top hidden md:block transition-colors duration-300 z-0"
                         style={{ scaleY: scrollYProgress }}
                     />
 
-                    {/* Animated scrolling line (Mobile) */}
+
                     <motion.div
                         className="absolute top-0 bottom-0 left-[1.25rem] -translate-x-px w-0.5 bg-blue-600 dark:bg-cyan-400 origin-top md:hidden transition-colors duration-300 z-0"
                         style={{ scaleY: scrollYProgress }}
