@@ -71,7 +71,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to explore
 ---
 
 ## 💻 Author
-**Munish Thakur** – Senior Software Engineer
+**Munish Thakur** – Software Engineer
 - 📧 Email: thakurmunish253@gmail.com
 
 ---
