@@ -13,6 +13,12 @@ interface Certification {
 
 const certifications: Certification[] = [
     {
+        title: "CommonWealth Bank - Software Engineering Job Simulation",
+        issuer: "Forage",
+        date: "22 March 2026",
+        link: "https://www.theforage.com/completion-certificates/2sNmYuurxgpFYawco/xv8eSGu7nksKNiCQj_2sNmYuurxgpFYawco_Lm3M8q5vmoG4yEW2j_1774179324054_completion_certificate.pdf",
+    },
+    {
         title: "Tata - GenAI Powered Data Analytics Job Simulation",
         issuer: "Forage",
         date: "Jan 2026",

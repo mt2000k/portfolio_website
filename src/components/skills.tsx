@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import {
     SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiJavascript,
     SiHtml5, SiCss3, SiBootstrap, SiPhp, SiMysql, SiGit, SiCplusplus,
-    SiPython, SiKalilinux, SiTableau, SiC, SiTypescript
+    SiPython, SiKalilinux, SiTableau, SiC, SiTypescript, SiSharp, SiDotnet,
+    SiPostman, SiRedux, SiNpm, SiAxios, SiJest
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { Database, Shield, BrainCircuit, BarChart, Server, Code2, FileSpreadsheet } from "lucide-react";
@@ -29,16 +30,23 @@ const skillCategories = [
             { name: "PHP", icon: <SiPhp className="w-8 h-8 text-indigo-400" /> },
             { name: "MySQL", icon: <SiMysql className="w-8 h-8 text-blue-600" /> },
             { name: "Git", icon: <SiGit className="w-8 h-8 text-orange-600" /> },
+            { name: "API Testing", icon: <SiPostman className="w-8 h-8 text-orange-500" /> },
+            { name: "State Management", icon: <SiRedux className="w-8 h-8 text-purple-500" /> },
+            { name: "Package Management", icon: <SiNpm className="w-8 h-8 text-red-500" /> },
+            { name: "HTTP Client Libraries", icon: <SiAxios className="w-8 h-8 text-blue-500" /> },
+            { name: "Unit Testing", icon: <SiJest className="w-8 h-8 text-red-600" /> },
         ]
     },
     {
         title: "Programming Languages",
         icon: <Code2 className="w-6 h-6" />,
         skills: [
-            { name: "C++", icon: <SiCplusplus className="w-8 h-8 text-blue-600" /> },
             { name: "C", icon: <SiC className="w-8 h-8 text-blue-500" /> },
+            { name: "C++", icon: <SiCplusplus className="w-8 h-8 text-blue-600" /> },
+            { name: "C# Programming", icon: <SiSharp className="w-8 h-8 text-green-500" /> },
             { name: "Java", icon: <FaJava className="w-8 h-8 text-red-500" /> },
             { name: "Python", icon: <SiPython className="w-8 h-8 text-yellow-500" /> },
+            { name: ".NET Development", icon: <SiDotnet className="w-8 h-8 text-purple-600" /> },
         ]
     },
     {
@@ -49,6 +57,7 @@ const skillCategories = [
             { name: "Algorithms", icon: <BrainCircuit className="w-8 h-8 text-cyan-500" /> },
             { name: "DBMS", icon: <Database className="w-8 h-8 text-green-500" /> },
             { name: "Computer Networks", icon: <Server className="w-8 h-8 text-purple-400" /> },
+            { name: "NoSQL Databases", icon: <Database className="w-8 h-8 text-green-400" /> },
         ]
     },
     {
