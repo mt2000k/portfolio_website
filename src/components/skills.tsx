@@ -22,7 +22,7 @@ const skillCategories = [
             { name: "Express.js", icon: <SiExpress className="w-8 h-8" /> },
             { name: "MongoDB", icon: <SiMongodb className="w-8 h-8 text-green-600" /> },
             { name: "JavaScript", icon: <SiJavascript className="w-8 h-8 text-yellow-400" /> },
-            { name: "TypeScript", icon: <SiTypescript className="w-8 h-8 text-blue-600" /> },
+            //   { name: "TypeScript", icon: <SiTypescript className="w-8 h-8 text-blue-600" /> },
             { name: "HTML5", icon: <SiHtml5 className="w-8 h-8 text-orange-500" /> },
             { name: "CSS3", icon: <SiCss3 className="w-8 h-8 text-blue-500" /> },
             { name: "Tailwind CSS", icon: <SiTailwindcss className="w-8 h-8 text-cyan-400" /> },
@@ -31,10 +31,10 @@ const skillCategories = [
             { name: "MySQL", icon: <SiMysql className="w-8 h-8 text-blue-600" /> },
             { name: "Git", icon: <SiGit className="w-8 h-8 text-orange-600" /> },
             { name: "API Testing", icon: <SiPostman className="w-8 h-8 text-orange-500" /> },
-            { name: "State Management", icon: <SiRedux className="w-8 h-8 text-purple-500" /> },
-            { name: "Package Management", icon: <SiNpm className="w-8 h-8 text-red-500" /> },
-            { name: "HTTP Client Libraries", icon: <SiAxios className="w-8 h-8 text-blue-500" /> },
-            { name: "Unit Testing", icon: <SiJest className="w-8 h-8 text-red-600" /> },
+            //  { name: "State Management", icon: <SiRedux className="w-8 h-8 text-purple-500" /> },
+            //  { name: "Package Management", icon: <SiNpm className="w-8 h-8 text-red-500" /> },
+            // { name: "HTTP Client Libraries", icon: <SiAxios className="w-8 h-8 text-blue-500" /> },
+            //  { name: "Unit Testing", icon: <SiJest className="w-8 h-8 text-red-600" /> },
         ]
     },
     {
@@ -42,8 +42,8 @@ const skillCategories = [
         icon: <Code2 className="w-6 h-6" />,
         skills: [
             { name: "C", icon: <SiC className="w-8 h-8 text-blue-500" /> },
-            { name: "C++", icon: <SiCplusplus className="w-8 h-8 text-blue-600" /> },
-            { name: "C# Programming", icon: <SiSharp className="w-8 h-8 text-green-500" /> },
+            // { name: "C++", icon: <SiCplusplus className="w-8 h-8 text-blue-600" /> },
+            // { name: "C# Programming", icon: <SiSharp className="w-8 h-8 text-green-500" /> },
             { name: "Java", icon: <FaJava className="w-8 h-8 text-red-500" /> },
             { name: "Python", icon: <SiPython className="w-8 h-8 text-yellow-500" /> },
             { name: ".NET Development", icon: <SiDotnet className="w-8 h-8 text-purple-600" /> },
@@ -61,13 +61,13 @@ const skillCategories = [
         ]
     },
     {
-        title: "Data Analytics & Sec",
+        title: "Data Analytics",
         icon: <BarChart className="w-6 h-6" />,
         skills: [
             { name: "Tableau", icon: <SiTableau className="w-8 h-8 text-blue-600" /> },
             { name: "Excel", icon: <FileSpreadsheet className="w-8 h-8 text-green-600" /> },
             { name: "Cybersecurity", icon: <Shield className="w-8 h-8 text-red-500" /> },
-            { name: "Kali Linux", icon: <SiKalilinux className="w-8 h-8 text-blue-300" /> },
+            //    { name: "Kali Linux", icon: <SiKalilinux className="w-8 h-8 text-blue-300" /> },
         ]
     }
 ];

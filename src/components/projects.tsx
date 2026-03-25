@@ -12,7 +12,7 @@ interface ProjectDetails {
     gradient: string;
     imageUrl?: string;
     githubUrl: string;
-    liveUrl: string;
+    liveUrl?: string;
 }
 
 const projects: ProjectDetails[] = [
@@ -21,36 +21,35 @@ const projects: ProjectDetails[] = [
         description: "A full-featured Next.js e-commerce store with Stripe integration, product filtering, and a custom admin dashboard.",
         techStack: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
         gradient: "from-blue-500 to-cyan-400",
-        imageUrl: "/e_commerce_dashboard.png",
-        githubUrl: "#",
+        imageUrl: "/ecommerce.png",
+        githubUrl: "https://github.com/mt2000k/Ain1Rentz",
         liveUrl: "#",
     },
     {
-        title: "Real-Time Chat App",
+        title: "Nexus Chat",
         description: "A scalable real-time messaging application using Socket.io and Redis for instant communication.",
         techStack: ["Node.js", "Express", "Socket.io", "React"],
         gradient: "from-purple-500 to-pink-500",
-        imageUrl: "/chat_app_interface.png",
-        githubUrl: "#",
-        liveUrl: "#",
+        imageUrl: "/chat_app.png",
+        githubUrl: "https://github.com/mt2000k/nexus"
     },
     {
-        title: "Cybersecurity Dashboard",
+        title: "Cybersecurity Dashboard (Under Development)",
         description: "An analytics dashboard visualizing real-time log analysis and threat detection metrics.",
         techStack: ["Python", "Tableau", "Next.js", "Tailwind"],
         gradient: "from-red-500 to-orange-500",
-        imageUrl: "/e_commerce_dashboard.png", // reusing due to gen failure
+        imageUrl: "/cybersecurity.png",
         githubUrl: "#",
         liveUrl: "#",
     },
     {
-        title: "3D Portfolio Matrix",
+        title: "3D Portfolio",
         description: "An interactive, WebGL-powered portfolio showcasing projects with realistic physics and materials.",
         techStack: ["Three.js", "React Three Fiber", "Framer Motion"],
         gradient: "from-green-400 to-teal-500",
         imageUrl: "/portfolio_matrixx.png",
         githubUrl: "https://github.com/mt2000k/portfolio_website",
-        liveUrl: "https://munishthakur.vercel.app/",
+        liveUrl: "",
     }
 ];
 
@@ -157,15 +156,17 @@ function ProjectCard({ project, index }: { project: ProjectDetails, index: numbe
                             <Github size={18} />
                             <span>Code</span>
                         </a>
-                        <a
-                            href={project.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-2 text-sm font-medium hover:text-cyan-500 transition-colors"
-                        >
-                            <ExternalLink size={18} />
-                            <span>Live Demo</span>
-                        </a>
+                        {project.liveUrl && (
+                            <a
+                                href={project.liveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-2 text-sm font-medium hover:text-cyan-500 transition-colors"
+                            >
+                                <ExternalLink size={18} />
+                                <span>Live Demo</span>
+                            </a>
+                        )}
                     </div>
                 </div>
             </motion.div>

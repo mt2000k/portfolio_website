@@ -10,7 +10,6 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
-        // Configure your SMTP settings in .env.local
         const transporter = nodemailer.createTransport({
             host: process.env.EMAIL_HOST || 'smtp.gmail.com',
             port: Number(process.env.EMAIL_PORT) || 587,
@@ -21,7 +20,7 @@ export async function POST(req: Request) {
         });
 
         await transporter.sendMail({
-            from: `"${name}" <${process.env.EMAIL_USER}>`, // typically required by SMTP providers
+            from: `"${name}" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_RECEIVER || process.env.EMAIL_USER,
             replyTo: email,
             subject: `New Portfolio Message from ${name}`,
