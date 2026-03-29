@@ -40,7 +40,7 @@ const projects: ProjectDetails[] = [
         gradient: "from-red-500 to-orange-500",
         imageUrl: "/cybersecurity.png",
         githubUrl: "#",
-        liveUrl: "#",
+        //      liveUrl: "#",
     },
     {
         title: "3D Portfolio",
