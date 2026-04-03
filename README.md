@@ -66,7 +66,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to explore
 
 - **/src/app** - Next.js Core Pages & API Routes (`/api/contact/route.ts`).
 - **/src/components** - Reusable UI components (`hero.tsx`, `about.tsx`, `navbar.tsx`, etc.).
-- **/public** - Static assets like the generated `resume.pdf`, profile images, and 3D `.glb/.gltf` canvas models.
+- **/public** - Static assets like the `resume.pdf`, profile images, and 3D `.glb/.gltf` canvas models.
 
 ---
 
