@@ -46,7 +46,7 @@ function TiltCard({ children }: { children: React.ReactNode }) {
                     rotateY,
                     transformStyle: "preserve-3d",
                 }}
-                className="relative w-full h-full rounded-3xl bg-foreground/5 border border-foreground/10 hover:border-blue-500/30 transition-colors duration-300 shadow-lg p-6 md:p-8 flex flex-col group overflow-hidden"
+                className="relative w-full h-full rounded-2xl bg-foreground/5 border border-foreground/10 hover:border-blue-500/30 transition-colors duration-300 shadow-lg p-6 md:p-8 flex flex-col group overflow-hidden"
             >
                 <div
                     style={{ transform: "translateZ(30px)" }}
@@ -112,7 +112,7 @@ export function About() {
                                             href="/resume.pdf"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center justify-center space-x-2 px-8 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] group z-20 pointer-events-auto"
+                                            className="inline-flex items-center justify-center space-x-2 px-8 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] group z-20 pointer-events-auto"
                                         >
                                             <span>View Resume</span>
                                             <FileText className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />

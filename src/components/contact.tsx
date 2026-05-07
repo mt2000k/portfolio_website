@@ -95,7 +95,7 @@ export function Contact() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                         onSubmit={handleSubmit}
-                        className="lg:col-span-3 space-y-6 bg-foreground/5 p-8 rounded-3xl border border-foreground/10 shadow-lg"
+                        className="lg:col-span-3 space-y-6 bg-foreground/5 p-8 rounded-2xl border border-foreground/10 shadow-lg"
                     >
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div className="space-y-2">
@@ -107,7 +107,7 @@ export function Contact() {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all font-medium"
+                                    className="w-full bg-background border border-foreground/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all font-medium"
                                     placeholder="Your Name"
                                 />
                             </div>
@@ -120,7 +120,7 @@ export function Contact() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all font-medium"
+                                    className="w-full bg-background border border-foreground/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all font-medium"
                                     placeholder="your@gmail.com"
                                 />
                             </div>
@@ -135,7 +135,7 @@ export function Contact() {
                                 value={formData.subject}
                                 onChange={handleChange}
                                 required
-                                className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all font-medium"
+                                className="w-full bg-background border border-foreground/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all font-medium"
                                 placeholder="Purpose"
                             />
                         </div>
@@ -149,7 +149,7 @@ export function Contact() {
                                 onChange={handleChange}
                                 required
                                 rows={5}
-                                className="w-full bg-background border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none font-medium"
+                                className="w-full bg-background border border-foreground/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none font-medium"
                                 placeholder="Hey there, I'd like to discuss a project..."
                             />
                         </div>
@@ -157,7 +157,7 @@ export function Contact() {
                         <button
                             type="submit"
                             disabled={status === "LOADING"}
-                            className="w-full flex items-center justify-center space-x-2 py-4 rounded-xl bg-foreground text-background font-semibold hover:bg-foreground/90 transition-all disabled:opacity-70 disabled:cursor-not-allowed group"
+                            className="w-full flex items-center justify-center space-x-2 py-4 rounded-lg bg-foreground text-background font-semibold hover:bg-foreground/90 transition-all disabled:opacity-70 disabled:cursor-not-allowed group"
                         >
                             {status === "LOADING" ? (
                                 <>

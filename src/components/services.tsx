@@ -85,13 +85,13 @@ export function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="p-8 rounded-3xl bg-foreground/5 border border-foreground/10 hover:border-blue-500/30 transition-all duration-300 shadow-lg group relative overflow-hidden"
+                            className="p-8 rounded-2xl bg-foreground/5 border border-foreground/10 hover:border-blue-500/30 transition-all duration-300 shadow-lg group relative overflow-hidden"
                         >
                             <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-20 transition-opacity">
                                 <ArrowUpRight className="w-8 h-8" />
                             </div>
 
-                            <div className="mb-6 p-4 rounded-2xl bg-background w-fit shadow-md group-hover:scale-110 transition-transform duration-300 border border-foreground/5">
+                            <div className="mb-6 p-4 rounded-xl bg-background w-fit shadow-md group-hover:scale-110 transition-transform duration-300 border border-foreground/5">
                                 {service.icon}
                             </div>
 

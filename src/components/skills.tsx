@@ -22,7 +22,7 @@ const skillCategories = [
             { name: "Express.js", icon: <SiExpress className="w-8 h-8" /> },
             { name: "MongoDB", icon: <SiMongodb className="w-8 h-8 text-green-600" /> },
             { name: "JavaScript", icon: <SiJavascript className="w-8 h-8 text-yellow-400" /> },
-            { name: "TypeScript", icon: <SiTypescript className="w-8 h-8 text-blue-600" /> },
+            //  { name: "TypeScript", icon: <SiTypescript className="w-8 h-8 text-blue-600" /> },
             { name: "HTML5", icon: <SiHtml5 className="w-8 h-8 text-orange-500" /> },
             { name: "CSS3", icon: <SiCss3 className="w-8 h-8 text-blue-500" /> },
             { name: "Tailwind CSS", icon: <SiTailwindcss className="w-8 h-8 text-cyan-400" /> },
@@ -31,9 +31,9 @@ const skillCategories = [
             { name: "MySQL", icon: <SiMysql className="w-8 h-8 text-blue-600" /> },
             { name: "Git", icon: <SiGit className="w-8 h-8 text-orange-600" /> },
             { name: "API Testing", icon: <SiPostman className="w-8 h-8 text-orange-500" /> },
-            // { name: "Unit Testing", icon: <SiJest className="w-8 h-8 text-red-600" /> },
+            { name: "Unit Testing", icon: <SiJest className="w-8 h-8 text-red-600" /> },
             //  { name: "State Management", icon: <SiRedux className="w-8 h-8 text-purple-500" /> },
-            //  { name: "Package Management", icon: <SiNpm className="w-8 h-8 text-red-500" /> },
+            { name: "Package Management", icon: <SiNpm className="w-8 h-8 text-red-500" /> },
             // { name: "HTTP Client Libraries", icon: <SiAxios className="w-8 h-8 text-blue-500" /> },
         ]
     },
@@ -103,10 +103,10 @@ export function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-                            className="p-6 rounded-3xl bg-foreground/5 border border-foreground/10 hover:border-blue-500/30 transition-colors shadow-lg"
+                            className="p-6 rounded-2xl bg-foreground/5 border border-foreground/10 hover:border-blue-500/30 transition-colors shadow-lg"
                         >
                             <div className="flex items-center space-x-3 mb-6 border-b border-foreground/10 pb-4">
-                                <div className="p-2 rounded-xl bg-blue-500/10 text-blue-500">
+                                <div className="p-2 rounded-lg bg-blue-500/10 text-blue-500">
                                     {category.icon}
                                 </div>
                                 <h3 className="text-2xl font-semibold">{category.title}</h3>
@@ -119,7 +119,7 @@ export function Skills() {
                                         whileHover={{ scale: 1.1, y: -5 }}
                                         className="flex flex-col items-center text-center group cursor-pointer"
                                     >
-                                        <div className="w-16 h-16 rounded-2xl bg-background flex items-center justify-center shadow-md mb-3 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all border border-foreground/5">
+                                        <div className="w-16 h-16 rounded-xl bg-background flex items-center justify-center shadow-md mb-3 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all border border-foreground/5">
                                             {skill.icon}
                                         </div>
                                         <span className="text-xs font-medium text-foreground/70 group-hover:text-foreground transition-colors">

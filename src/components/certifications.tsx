@@ -85,9 +85,9 @@ export function Certifications() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="flex items-start space-x-4 p-6 rounded-2xl bg-foreground/5 border border-foreground/10 hover:border-emerald-500/30 transition-all hover:bg-foreground/10 group cursor-pointer"
+                            className="flex items-start space-x-4 p-6 rounded-xl bg-foreground/5 border border-foreground/10 hover:border-emerald-500/30 transition-all hover:bg-foreground/10 group cursor-pointer"
                         >
-                            <div className="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl group-hover:scale-110 transition-transform">
+                            <div className="p-3 bg-emerald-500/10 text-emerald-500 rounded-lg group-hover:scale-110 transition-transform">
                                 <Award size={28} />
                             </div>
                             <div className="flex-1">

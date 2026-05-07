@@ -104,7 +104,7 @@ function ProjectCard({ project, index }: { project: ProjectDetails, index: numbe
                     rotateY,
                     transformStyle: "preserve-3d",
                 }}
-                className="relative h-full w-full rounded-2xl bg-foreground/5 border border-foreground/10 flex flex-col overflow-hidden group hover:border-foreground/20 transition-colors"
+                className="relative h-full w-full rounded-xl bg-foreground/5 border border-foreground/10 flex flex-col overflow-hidden group hover:border-foreground/20 transition-colors"
             >
                 {/* Project "Image" Header */}
                 <div style={{ transform: "translateZ(50px)" }} className={`w-full h-48 relative overflow-hidden ${!project.imageUrl ? `bg-gradient-to-br ${project.gradient}` : ""}`}>

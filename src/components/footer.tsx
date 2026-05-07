@@ -5,9 +5,6 @@ export function Footer() {
                 <p className="text-sm text-foreground/60 font-medium">
                     © {new Date().getFullYear()} Thakur. All rights reserved.
                 </p>
-                <p className="text-sm text-foreground/40">
-                    Built with Next.js, Framer Motion, and React Three Fiber
-                </p>
             </div>
         </footer>
     );

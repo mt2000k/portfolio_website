@@ -97,7 +97,7 @@ function ExperienceCard({ item, index }: { item: ExperienceItem; index: number }
                 </motion.div>
             </div>
 
-            <div className="w-[calc(100%-3.5rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-3xl bg-foreground/5 border border-foreground/10 hover:border-blue-600/30 dark:hover:border-cyan-400/40 transition-all duration-300 shadow-md">
+            <div className="w-[calc(100%-3.5rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-foreground/5 border border-foreground/10 hover:border-blue-600/30 dark:hover:border-cyan-400/40 transition-all duration-300 shadow-md">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
                     <h3 className="text-xl font-bold text-foreground group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">
                         {item.title}
